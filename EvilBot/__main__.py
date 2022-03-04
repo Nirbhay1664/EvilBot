@@ -23,9 +23,9 @@ from EvilBot import (
 )
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from EvilBot.modules import ALL_MODULES
-from EvilBot.modules.helper_funcs.chat_status import is_user_admin
-from EvilBot.modules.helper_funcs.misc import paginate_modules
+from sarkarBot.modules import ALL_MODULES
+from sarkarBot.modules.helper_funcs.chat_status import is_user_admin
+from sarkarBot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -64,16 +64,16 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
     return ping_time
 PM_START_TEXT = """
-`𝙷𝚎𝚕𝚕𝚘` [👿](https://telegra.ph/file/b1ae67fad00c60d51a5f2.jpg) `𝙼𝚢 𝚗𝚊𝚖𝚎 𝚒𝚜` *𝙴𝚟𝚒𝚕 𝚁𝚘𝚋𝚘𝚝*
+`𝙷𝚎𝚕𝚕𝚘` [👿](https://telegra.ph/file/b1ae67fad00c60d51a5f2.jpg) `𝙼𝚢 𝚗𝚊𝚖𝚎 𝚒𝚜` * 𝕊𝕒𝕣𝕜𝕒𝕣_𝕩_𝕣𝕠𝕓𝕠𝕥 *
 `𝙸'𝚖 𝚑𝚎𝚛𝚎 𝚝𝚘 𝚑𝚎𝚕𝚙 𝚢𝚘𝚞 𝚖𝚊𝚗𝚊𝚐𝚎 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙𝚜! 𝙷𝚒𝚝` *📚𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜*   
 """
 buttons = [
     [
         InlineKeyboardButton(
-            text="𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐏𝐥𝐚𝐜𝐞😇", url="t.me/EVIL_XOBOT?startgroup=true"),
+            text="𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐏𝐥𝐚𝐜𝐞😇", url="t.me/sarkar_x__robot?startgroup=true"),
     ],
      [
-        InlineKeyboardButton(text="𝐀𝐛𝐨𝐮𝐭💝", callback_data="evil_"),
+        InlineKeyboardButton(text="𝐀𝐛𝐨𝐮𝐭💝", callback_data="sarkar_"),
         InlineKeyboardButton(
             text="𝐌𝐲 𝐖𝐞𝐛🌐", url=f"http://evilbotz.art.blog"
         ),
@@ -88,7 +88,7 @@ buttons = [
     ],
 ]
 HELP_STRINGS = """
-`𝙷𝚎𝚢!.. 𝙸'𝚖` 👿 *𝙴𝚟𝚒𝚕 𝚁𝚘𝚋𝚘𝚝* [👿](https://telegra.ph/file/a064bd8497a5f6f03b290.mp4)
+`𝙷𝚎𝚢!.. 𝙸'𝚖` 👿 *sarkar* [👿](https://telegra.ph/file/a064bd8497a5f6f03b290.mp4)
 `𝙲𝚕𝚒𝚌𝚔 𝚘𝚗 𝚝𝚑𝚎 𝚋𝚞𝚝𝚝𝚘𝚗𝚜 𝚋𝚎𝚕𝚘𝚠 𝚝𝚘 𝚐𝚎𝚝 𝚍𝚘𝚌𝚞𝚖𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗 𝚊𝚋𝚘𝚞𝚝 𝚜𝚙𝚎𝚌𝚒𝚏𝚒𝚌 𝚖𝚘𝚍𝚞𝚕𝚎𝚜..`"""
 evil_IMG = "https://telegra.ph/file/5dc8f5c53fb0c39ed983c.jpg"
 DONATE_STRING = """Heya, glad to hear you want to donate!
